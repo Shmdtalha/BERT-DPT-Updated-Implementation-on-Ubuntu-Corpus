@@ -30,6 +30,8 @@ To evaluate your model and obtain checkpoints, run the line below
 ```python
 !python re_main.py --model bert_dpt_ft --train_type fine_tuning --bert_pretrained bert-post-uncased --evaluate results/checkpoints/checkpoint_.pth
 ```
+If you would like to evaluate the model without training it, you may use the checkpoint files \
+[BERT-DPT Checkpoint Files](https://drive.google.com/file/d/1DyhwltQ6oM3icENmauVxR_2BMlJcyuhE/view?usp=sharing)
 ## Acknowledgements
 [BERT-DPT GitHub Repository](https://github.com/taesunwhang/BERT-ResSel) \
 [An Effective Domain Adaptive Post-Training Method for BERT in Response Selection](https://arxiv.org/abs/1908.04812v2)
