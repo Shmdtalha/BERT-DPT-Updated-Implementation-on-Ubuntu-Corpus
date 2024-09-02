@@ -69,5 +69,5 @@ POST_TRAINING_PARAMS.update(
 
   checkpoint_save_step=2500, # virtual_batch -> 10000 step
   model_type="bert_ubuntu_pt",
-  data_dir="./data/ubuntu_corpus_v1/ubuntu_post_training.hdf5",
+  data_dir="./data/ubuntu_corpus_v2/ubuntu_post_training.hdf5",
 )

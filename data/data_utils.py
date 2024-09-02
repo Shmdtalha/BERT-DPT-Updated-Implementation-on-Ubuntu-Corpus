@@ -90,8 +90,8 @@ class UbuntuDataUtils(object):
     print(len(ubuntu_knowledge_dict))
 
 if __name__ == '__main__':
-  ubuntu_raw_path = "data\\ubuntu_corpus_v1\\%s.txt"
-  ubuntu_pkl_path = "data\\ubuntu_corpus_v1\\ubuntu_%s.pkl"
+  ubuntu_raw_path = "data\\ubuntu_corpus_v2\\%s.txt"
+  ubuntu_pkl_path = "data\\ubuntu_corpus_v2\\ubuntu_%s.pkl"
   bert_pretrained_dir = "resources"
 
   ubuntu_utils = UbuntuDataUtils(ubuntu_raw_path, bert_pretrained_dir)
@@ -104,5 +104,5 @@ if __name__ == '__main__':
   # domain post training corpus creation
   for data_type in ["train"]:
     data = ubuntu_utils.read_raw_file(data_type)
-    ubuntu_utils.make_post_training_corpus(data, "./data/ubuntu_corpus_v1/ubuntu_post_training.txt")
+    ubuntu_utils.make_post_training_corpus(data, "./data/ubuntu_corpus_v2/ubuntu_post_training.txt")
 

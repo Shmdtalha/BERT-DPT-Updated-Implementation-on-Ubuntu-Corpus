@@ -1,0 +1,128 @@
+how to check what is using my hdd ? __eou__
+lsof __eou__
+is there some htop-ish display in procent or some learderboard what is using the most of mine resources ? __eou__ hhd-wise ? __eou__ hdd __eou__
+not that i know of . __eou__ __eot__
+
+does ubuntu come with the verdana font pre-installed ? __eou__ if not , where could i find it ? __eou__ hello ... which version of vmware is free for linux ? __eou__
+player and server __eou__
+is the player enough to set up a windows vm locally ? __eou__
+i think if you create a vmx file with a web site it is , but vmware server can actually create new virtual machines __eou__ __eot__
+
+im trying to do apt-get build-dep wine on gutsy , and i get __eou__ `` build-dependencies for wine could not be satisfied '' __eou__
+have you got all the ubuntu repos enabled ? __eou__ __eot__
+
+hello __eou__ is runlevel 3 the corect run level to allow everything as before but without gui ? __eou__
+if you dont want to run the gui . disable the gdm . / kdm servie . i dont think ubuntu uses the runlevels like other disrtos used to . __eou__ __eot__
+
+whats wrong with qt ? __eou__
+nothing __eou__ __eot__
+
+anybody in here use skype ? __eou__
+no , but yes it works in ubuntu , but i know how can phone loads of countires for free __eou__ __eot__
+
+how can i speed up ubuntu 's initialazation process ? __eou__
+stop all the services you dont need from loading on startup . __eou__
+where can i see a list of them or something ? __eou__
+they are in / etc/rc2 . d __eou__
+i have no idea what those files are for . : / __eou__
+those are all the services that load on startup . if you dont know something , either ask or google for it and see if you can remove it . __eou__
+i wa n't to get rid of the thing that tries to connect to the internet to get information for the clock or something . __eou__ __eot__
+
+my grub menu not displayed while starting ubuntu , what should i change ? __eou__ i had changed grub_hidden_timeout = 5 in / etc/default/grub __eou__ i had changed grub_hidden_timeout = 5 in / etc/default/grub . cfg __eou__ then did update-grub , but still no difference __eou__
+coomment out the vars that have hidden in / etc/default/grub __eou__ then run update-grub __eou__
+ok , doing that __eou__ ya that worked , thanks a lot :-rrb- __eou__ __eot__
+
+hello , i am unable to install from the cd __eou__ i can not get a full boot from the cd __eou__ ubuntu is unble to start x __eou__
+did you check if your video card is supported ? __eou__
+no , where should i go ? __eou__
+just a moment . i do n't recall where the hardware list is . __eou__ https://wiki.ubuntu.com/hardwaresupport __eou__ __eot__
+
+oops sorry __eou__ yeah that was my mistake sorry __eou__ some isp 's block you from changing your essid __eou__ so make sure they wont first before you even bother __eou__ everytime i change my essid and pasword to the router they change it again __eou__
+get your own router then . it seems very bad policy to have a fixed password for customers :\ __eou__ __eot__
+
+to copy folders , use `` cp - r source source source ... target '' __eou__
+ty , now its just flashing with a marker __eou__
+just wait till it gives you the prompt back __eou__ that does n't look right __eou__ try like : cp - r / home/keg / media/that-huge-number - thingy __eou__ to stop the execution , hit ctrl + c __eou__ looks right . __eou__ to make sure it 's doing stuff right : cp - rpv / home/keg / media/9f8a98af-b 52f-4cc2-89d7-f3f13d5cbeba __eou__
+dcorking , okay the original command has worked but with the - p parameter it has flagged lots of permission issues __eou__
+try it with sudo . __eou__ odd , i suppose so . __eou__ you ca n't copy that , indeed __eou__ ln - s target linkname __eou__
+i want my $ home on my new / media/longnumber device __eou__
+is that / media/longnumber a portable device ? __eou__ __eot__
+
+hey , i am trying to boot from grub on my internal harddrive , with linux installed on a secondary removable harddrive . i am wondering what i would need to edit in / etc/fstab to change the boot partition to be found on / sda -lrb- my internal harddrive -rrb- __eou__ can someone please help me with this ? __eou__
+i think you would use gparted to do that __eou__ __eot__
+
+i fail to see what this has to do with the issue at hand or how this would get his data back ? __eou__
+the original question was whether r/w access for ntfs was available and whether it would mess up the system __eou__ __eot__
+
+it 's actually spelled that way man __eou__ anyone know where i can get my hands on a library i can use for reading encrypted dvds ? __eou__
+the dvd css thingy ? __eou__ ! dvd __eou__ __eot__
+
+why ca n't i see the list of users in xchat-gnome ? __eou__
+ive seen where the left side nick/user list gets resized where you cant see it . mouse to the side . check that its not there but made 1 pixle wide __eou__ __eot__
+
+this process ifplugd starts whenever my system starts , i did `` update-rc . d - f ifplugd remove '' , and it 's not listed anywhere in / etc/rc ? . d anymore , but it still tarts __eou__ starts * __eou__ where else in the system can things be started from ? __eou__
+does the file ifplugd still exist ? __eou__
+yes __eou__
+where is it ? which directory ? __eou__ misterecs - > does ifconfig - a show any ip address assigned to your pc ? __eou__
+/ usr/sbin/ifplugd __eou__
+i dont have that , am on dapper . . __eou__
+i 'm on dapper too . __eou__ it 's not a stock package __eou__ __eot__
+
+how do i mount the hdd from the livecd ? __eou__
+mkdir / mnt/hdd then mount - t <filesystem> / mnt/hdd __eou__ __eot__
+
+i do n't know anything about it , and this might not be quite what you are looking for , but there is an ffmpeg package in marillat 's repository . __eou__
+: where can i get detail about this repo ? __eou__
+some time ago i added a description of how to add it to the sources.list , but the wiki/ubuntu docs have morhed quite a bit since then , and i do n't know where it ended up . __eou__ add to sources.list : deb ftp : / / ftp.nerim.net/debian-marillat/ unstable main __eou__ usual disclaimer : use at your own risk ! __eou__ __eot__
+
+hmmm i wonder does netstat work on linux __eou__
+yes , it does . but its not the `` windows '' netstat ... its just a linux equivalent . __eou__
+:-rrb- i was being sarcastic but thank you for answering __eou__ __eot__
+
+hi , i just upgraded hoary - > breezy and i 'm having a problem with firefox __eou__
+whats the problem __eou__
+it segfaults on startup ; it seems a problem with esddsp , it stopped complaining when i changed firefox_dsp to `` aoss '' , but i would like to know if there is a way to fix it using esddsp __eou__
+anyone know how to get temporary permissions in nautlius , sort of like run a `` sudo '' command without actually starting up the program as `` sudo nautilus '' ? __eou__ __eot__
+
+hi i 'm installing ubuntu but there are error , everything installs okay , , i have an ntfs paritition the first one and it has windows xp on it , then the next two are root then home , and the last is the swap , i have set the first partition ntfs as bootable flag . . __eou__ after installtion boot i can not boot to grup . . . __eou__ grub __eou__ are there any programs out there there that give you stats about your hardware , like cpu speed and bus speed and etc ? __eou__
+there are a lot of packages for that . i personally use lshw . __eou__
+can you tell me if you can see your motherboards fsb ? __eou__ __eot__
+
+hi guys can neone recommend a very lightweight pdf viewer which remembers page you last on ? tried googling but only found few products from 2009 article called xpdf but always know someone may know of alternatives which are better __eou__ sorry not products , i meant apps __eou__
+do n't close the pdf ? __eou__
+lol nah rather have program remember lol thanks for the tip tho lol haha __eou__ __eot__
+
+i love the trumpet __eou__
+if its under / etc / yes :-rrb- __eou__ __eot__
+
+well you tried ha ha __eou__ thats more than i can say for some people __eou__
+wa ? __eou__
+<joseah> anggadj98 , well you tried ha ha __eou__ <joseah> anggadj98 , thats more than i can say for some people __eou__
+i mean __eou__ what do you mean ? __eou__
+i mean it no work __eou__
+what did i try ? __eou__
+to help me __eou__ __eot__
+
+still running shit vista __eou__ so i hear , devilz :-rrb- __eou__ say , why did you guys decide to install ubuntu ? __eou__ my hardware should be more than adequate btw __eou__ really , righ tnow it 's down to ubuntu or windows 7 . the one problem i have with ubuntu are is the app compatibility issue : / __eou__ and games __eou__ i see __eou__ yah , that 's the thing , devilz : / __eou__ i love ubuntu , but it 's the games and apps that have me worried __eou__ i 've loooked into alternative methods though __eou__
+dual boot __eou__ not worth it , i already tried it out . __eou__
+you ever play steam games ? __eou__ __eot__
+
+kamion : how do i get the desktop stuff want-to-be-installed , without using base-config ? __eou__ hmm , yeah , that does n't seem to set them to ` install ' when you have an uninstallable . . meh __eou__ that would require me to be able to run aptitude without running screaming from the room ;--rrb- __eou__ but ok __eou__ okay , getting very bored with the lack of tty tickets __eou__ -- \ tasks __eou__ -- \ unrecognized tasks __eou__ -- ubuntu-desktop __eou__ `` unrecognized '' ? __eou__
+it 's a breakaway task which we have no diplomatic relations with at this stage __eou__ yeah __eou__
+process mails ? __eou__ __eot__
+
+one more question : is it safe to upgrade from karmic to lucid or would it be better to do a reinstall and if i make an upgrade can i prevent uprader from removing things -lrb- as it eg wants to remove xscreensaver -rrb- __eou__ ? __eou__
+depends . upgrading can be recommended , depending on how crazy you 've been with your system . __eou__ __eot__
+
+i tried vlc totem and mplayer and nothing can play an avi file i have __eou__ any help ? __eou__
+what exactly is the error ? __eou__
+deafboy : how ? __eou__
+vlc has most codecs built-in . __eou__ __eot__
+
+i manually edited the / etc/shadow file , is it necessary to tell the system to reload or refresh the file ? __eou__ or is something that is consulted everytime a login is attempted ? __eou__
+should n't be ... . the next time you login ... . you should be ok __eou__ __eot__
+
+what c++ compiler would you guys reccomend for ubuntu ? __eou__
+g + + __eou__
+where can i find that ? __eou__ __eot__
+
