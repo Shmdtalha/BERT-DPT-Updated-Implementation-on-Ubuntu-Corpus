@@ -5,7 +5,7 @@ import logging
 from datetime import datetime
 
 from config.hparams import *
-from data.data_utils import InputExamples
+#from data.data_utils import InputExamples
 from train import ResponseSelection
 from evaluation import Evaluation
 from post_train import BERTDomainPostTraining
@@ -90,8 +90,8 @@ def main():
                           default="./results",
                           help="model train logs, checkpoints")
   arg_parser.add_argument("--data_dir", dest="data_dir", type=str,
-                          default="/content/BERT-ResSel/data/Ubuntu_Corpus_V1/ubuntu_post_training.hdf5",
-                          help="ubuntu corpus v1 pkl path") # ubuntu_train.pkl, ubuntu_valid_pkl, ubuntu_test.pkl
+                          default="./data/Ubuntu_Corpus_V2/ubuntu_post_training.hdf5",
+                          help="ubuntu corpus v1 pkl path") # ubuntu_test.pkl, ubuntu_ubuntu_valid.pkl, ubuntu_test.pkl
   arg_parser.add_argument("--bert_pretrained_dir", dest="bert_pretrained_dir", type=str,
                           default="./resources",
                           help="bert pretrained directory")
@@ -102,7 +102,7 @@ def main():
                           default="post_training",
                           help="Train type") # fine_tuning, post_training
   arg_parser.add_argument("--evaluate", dest="evaluate", type=str,
-                          help="Evaluation Checkpoint", default=True)
+                          help="Evaluation Checkpoint", default=False)
 
   args = arg_parser.parse_args()
   if args.evaluate:

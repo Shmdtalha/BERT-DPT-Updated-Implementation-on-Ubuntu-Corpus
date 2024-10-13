@@ -1,6 +1,6 @@
 # BERT-DPT Updated Implementation on Ubuntu Corpus
 This repository contains an updated implementation of An Effective Domain Adaptive Post-Training Method for BERT in Response Selection (BERT-DPT). This implementation will work with the latest version of Python.
-test
+
 ## Setting up the Environment
 This model is compaible with python 3.10 and tensorflow 2.10.
 An A100 GPU (about 7 instances) was used to speed up training since BERT-DPT is very resource-intensive. It is available on Colab Pro, but you may work without it. Please note that it will take far longer with other architectures.
@@ -13,13 +13,13 @@ Place it in this directory: resources/bert-base-uncased
 You may download the dataset here: [Ubuntu Dialogue Corpus](https://drive.google.com/drive/folders/1cm1v3njWPxG5-XhEUpGH25TMncaPR7OM?usp=sharing) 
 
 ## Preprocessing
-Preprocessing returns a `ubuntu_post_training.hdf5` file, which must be placed in data/Ubuntu_Corpus_V1 directory
+Preprocessing returns a `ubuntu_post_training.hdf5` file, which must be placed in data/ubuntu_corpus_v2 directory
 ```python
 !python data/create_bert_post_training_data.py
 ```
 ## Domain Post Training
 ```python
-!python re_main.py --model bert_ubuntu_pt --train_type post_training --bert_pretrained bert-base-uncased --data_dir /data/Ubuntu_Corpus_V1/ubuntu_post_training.hdf5
+!python re_main.py --model bert_ubuntu_pt --train_type post_training --bert_pretrained bert-base-uncased --data_dir ./data/ubuntu_corpus_v2/ubuntu_post_training.hdf5
 ```
 ## Fine Tuning
 Fine tuning was performed using BERT base

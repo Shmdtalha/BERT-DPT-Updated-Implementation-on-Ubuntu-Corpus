@@ -10,6 +10,19 @@ from torch import nn, optim
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 
+try:
+    import data
+    print("data module found")
+except ImportError:
+    print("data module not found")
+
+try:
+    import data.dataset
+    print("data.dataset module found")
+except ImportError:
+    print("data.dataset module not found")
+
+
 from data.dataset import ResponseSelectionDataset
 from models.utils.checkpointing import CheckpointManager, load_checkpoint
 from models import Model
