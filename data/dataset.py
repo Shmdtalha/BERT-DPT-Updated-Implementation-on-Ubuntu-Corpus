@@ -26,10 +26,13 @@ class ResponseSelectionDataset(Dataset):
         # read pkls -> Input Examples
         self.input_examples = []
         with open(hparams.data_dir % (hparams.task_name, split), "rb") as pkl_handle:
+          print("----------------------")
           while True:
             try:
+              print("------------------ABOOUT TO pickle.load(pkl_handle: ", pickle.load(pkl_handle))
               self.input_examples.append(pickle.load(pkl_handle))
-              if len(self.input_examples) % 100000 == 0:
+              print("---------------pickle.load(pkl_handle): ", pickle.load(pkl_handle))
+              if len(self.input_examples) % 10 == 0:
                 print("%d examples has been loaded!" % len(self.input_examples))
             except EOFError:
               break
