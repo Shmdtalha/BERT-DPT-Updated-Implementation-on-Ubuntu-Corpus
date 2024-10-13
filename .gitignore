@@ -4,3 +4,4 @@ Ubuntu_Corpus_V2S/
 __pycache__/
 checkpoints/
 results/
+*.pyc
