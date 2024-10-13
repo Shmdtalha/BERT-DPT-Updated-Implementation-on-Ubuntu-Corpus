@@ -187,7 +187,7 @@ if __name__ == '__main__':
     ubuntu_utils.make_examples_pkl(data, ubuntu_pkl_path % data_type)
 
   # domain post training corpus creation
-  print("Building Post-Training-HDF-5 file")
+  print("Building Post-Training file")
   for data_type in ["train"]:
     data = ubuntu_utils.read_raw_file(data_type)
     ubuntu_utils.make_post_training_corpus(data, "./data/ubuntu_corpus_v2/ubuntu_post_training.txt")
