@@ -1,6 +1,6 @@
 # BERT-DPT Updated Implementation on Ubuntu Corpus
 This repository contains an updated implementation of An Effective Domain Adaptive Post-Training Method for BERT in Response Selection (BERT-DPT). This implementation will work with the latest version of Python.
-
+test
 ## Setting up the Environment
 This model is compaible with python 3.10 and tensorflow 2.10.
 An A100 GPU (about 7 instances) was used to speed up training since BERT-DPT is very resource-intensive. It is available on Colab Pro, but you may work without it. Please note that it will take far longer with other architectures.
