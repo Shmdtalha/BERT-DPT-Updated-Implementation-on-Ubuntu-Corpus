@@ -1,3 +1,8 @@
+pip install six, h5py, tensorboard
+run python data/data_utils.py
+!python data/create_bert_post_training_data.py
+python re_main.py --model bert_ubuntu_pt --train_type post_training --bert_pretrained bert-base-uncased --data_dir ./data/Ubuntu_Corpus_V2/ubuntu_post_training.hdf5
+___________________________________
 # BERT-DPT Updated Implementation on Ubuntu Corpus
 This repository contains an updated implementation of An Effective Domain Adaptive Post-Training Method for BERT in Response Selection (BERT-DPT). This implementation will work with the latest version of Python.
 
@@ -13,13 +18,13 @@ Place it in this directory: resources/bert-base-uncased
 You may download the dataset here: [Ubuntu Dialogue Corpus](https://drive.google.com/drive/folders/1cm1v3njWPxG5-XhEUpGH25TMncaPR7OM?usp=sharing) 
 
 ## Preprocessing
-Preprocessing returns a `ubuntu_post_training.hdf5` file, which must be placed in data/ubuntu_corpus_v2 directory
+Preprocessing returns a `ubuntu_post_training.hdf5` file, which must be placed in data/Ubuntu_Corpus_V2 directory
 ```python
 !python data/create_bert_post_training_data.py
 ```
 ## Domain Post Training
 ```python
-!python re_main.py --model bert_ubuntu_pt --train_type post_training --bert_pretrained bert-base-uncased --data_dir ./data/ubuntu_corpus_v2/ubuntu_post_training.hdf5
+!python re_main.py --model bert_ubuntu_pt --train_type post_training --bert_pretrained bert-base-uncased --data_dir ./data/Ubuntu_Corpus_V2/ubuntu_post_training.hdf5
 ```
 ## Fine Tuning
 Fine tuning was performed using BERT base

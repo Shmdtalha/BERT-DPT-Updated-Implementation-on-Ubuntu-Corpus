@@ -65,6 +65,8 @@ class UbuntuDataUtils(object):
 
         for utt in dialog_data[1:-1]:
           utt_tok = self._bert_tokenizer.tokenize(utt)
+          
+
           utterances.append(utt_tok)
           dialog_len.append(len(utt_tok))
 
@@ -139,6 +141,10 @@ def convert_v2_to_v1_test(v2_filepath, response_dict):
             context = row[1]
             pos_response_id = row[2]
             neg_response_ids = row[3].split('|')
+
+            if len(neg_response_ids) != 9:
+               continue
+
             context = context.replace('__eot__', '').strip()
             context_parts = context.split("__eou__")
             tab_separated_context = "\t".join([part.strip() for part in context_parts if part.strip()])
@@ -159,23 +165,23 @@ def write_v1_output(v1_lines, output_filepath):
 
 
 if __name__ == '__main__':
-  ubuntu_raw_path = "data\\ubuntu_corpus_v2\\%s.txt"
-  ubuntu_formatted_path = "data\\ubuntu_corpus_v2\\v1_%s.txt"
-  ubuntu_pkl_path = "data\\ubuntu_corpus_v2\\ubuntu_%s.pkl"
+  ubuntu_raw_path = "data/Ubuntu_Corpus_V2/%s.txt"
+  ubuntu_formatted_path = "data/Ubuntu_Corpus_V2/v1_%s.txt"
+  ubuntu_pkl_path = "data/Ubuntu_Corpus_V2/ubuntu_%s.pkl"
   bert_pretrained_dir = "resources"
 
   print("Building response dictionary")
-  response_dict = build_response_dict('data\\ubuntu_corpus_v2\\responses.txt')
+  response_dict = build_response_dict('data/Ubuntu_Corpus_V2/responses.txt')
 
   print("Converting UDC format")
-  v1_train_lines = convert_v2_to_v1_train('data\\ubuntu_corpus_v2\\train.txt', response_dict)
-  write_v1_output(v1_train_lines, 'data\\ubuntu_corpus_v2\\v1_train.txt')
+  v1_train_lines = convert_v2_to_v1_train('data/Ubuntu_Corpus_V2/train.txt', response_dict)
+  write_v1_output(v1_train_lines, 'data/Ubuntu_Corpus_V2/v1_train.txt')
     
-  v1_valid_lines = convert_v2_to_v1_test('data\\ubuntu_corpus_v2\\valid.txt', response_dict)
-  write_v1_output(v1_valid_lines, 'data\\ubuntu_corpus_v2\\v1_valid.txt')
+  v1_valid_lines = convert_v2_to_v1_test('data/Ubuntu_Corpus_V2/valid.txt', response_dict)
+  write_v1_output(v1_valid_lines, 'data/Ubuntu_Corpus_V2/v1_valid.txt')
     
-  v1_test_lines = convert_v2_to_v1_test('data\\ubuntu_corpus_v2\\test.txt', response_dict)
-  write_v1_output(v1_test_lines, 'data\\ubuntu_corpus_v2\\v1_test.txt')
+  v1_test_lines = convert_v2_to_v1_test('data/Ubuntu_Corpus_V2/test.txt', response_dict)
+  write_v1_output(v1_test_lines, 'data/Ubuntu_Corpus_V2/v1_test.txt')
 
   ubuntu_utils = UbuntuDataUtils(ubuntu_formatted_path, bert_pretrained_dir)
 
@@ -190,5 +196,5 @@ if __name__ == '__main__':
   print("Building Post-Training file")
   for data_type in ["train"]:
     data = ubuntu_utils.read_raw_file(data_type)
-    ubuntu_utils.make_post_training_corpus(data, "./data/ubuntu_corpus_v2/ubuntu_post_training.txt")
+    ubuntu_utils.make_post_training_corpus(data, "./data/Ubuntu_Corpus_V2/ubuntu_post_training.txt")
 

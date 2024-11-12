@@ -9,7 +9,7 @@ from torch.utils.data import Dataset
 
 class ResponseSelectionDataset(Dataset):
     """
-    A full representation of VisDial v1.0 (train/val/test) dataset. According
+    A full representation of VisDial 2.0 (train/val/test) dataset. According
     to the appropriate split, it returns dictionary of question, image,
     history, ground truth answer, answer options, dense annotations etc.
     """
@@ -26,17 +26,15 @@ class ResponseSelectionDataset(Dataset):
         # read pkls -> Input Examples
         self.input_examples = []
         with open(hparams.data_dir % (hparams.task_name, split), "rb") as pkl_handle:
-          print("----------------------")
           while True:
             try:
-              print("------------------ABOOUT TO pickle.load(pkl_handle: ", pickle.load(pkl_handle))
               self.input_examples.append(pickle.load(pkl_handle))
-              print("---------------pickle.load(pkl_handle): ", pickle.load(pkl_handle))
-              if len(self.input_examples) % 10 == 0:
+
+              if len(self.input_examples) % 100000 == 0:
                 print("%d examples has been loaded!" % len(self.input_examples))
             except EOFError:
               break
-
+        #print(self.input_examples[:10])
         print("total %s examples" % split, len(self.input_examples))
 
         bert_pretrained_dir = os.path.join(self.hparams.bert_pretrained_dir, self.hparams.bert_pretrained)
@@ -125,7 +123,7 @@ class ResponseSelectionDataset(Dataset):
 
 class BertPostTrainingDataset(Dataset):
   """
-  A full representation of VisDial v1.0 (train/val/test) dataset. According
+  A full representation of VisDial 2.0 (train/val/test) dataset. According
   to the appropriate split, it returns dictionary of question, image,
   history, ground truth answer, answer options, dense annotations etc.
   """

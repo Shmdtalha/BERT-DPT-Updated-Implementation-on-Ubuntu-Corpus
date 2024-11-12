@@ -32,12 +32,14 @@ class ResponseSelection(object):
   def __init__(self, hparams):
     self.hparams = hparams
     self._logger = logging.getLogger(__name__)
-
+ 
   def _build_dataloader(self):
+
     # =============================================================================
     #   SETUP DATASET, DATALOADER
     # =============================================================================
     self.train_dataset = ResponseSelectionDataset(self.hparams, split="train")
+
     self.train_dataloader = DataLoader(
       self.train_dataset,
       batch_size=self.hparams.train_batch_size,
@@ -45,6 +47,7 @@ class ResponseSelection(object):
       shuffle=True,
       drop_last=True
     )
+
 
     print("""
        # -------------------------------------------------------------------------

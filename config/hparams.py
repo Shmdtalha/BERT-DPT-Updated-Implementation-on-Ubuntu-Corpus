@@ -43,16 +43,11 @@ BASE_PARAMS = defaultdict(
   bert_checkpoint_path="bert-base-uncased-pytorch_model.bin",
   model_type="bert_base_ft",
 
-  load_pthpath="",
-  cpu_workers=8,
+
+  load_pthpath="results/bert_dpt_ft/fine_tuning/20241111-205705/checkpoints/checkpoint_4.pth",
+  cpu_workers=0,
   tensorboard_step=1000,
   evaluate_print_step=100,
-)
-
-DPT_FINETUNING_PARAMS = BASE_PARAMS.copy()
-DPT_FINETUNING_PARAMS.update(
-  bert_checkpoint_path="bert-post-uncased-pytorch_model.pth", # should be defined here
-  model_type="bert_dpt_ft"
 )
 
 POST_TRAINING_PARAMS = BASE_PARAMS.copy()
@@ -67,7 +62,17 @@ POST_TRAINING_PARAMS.update(
   virtual_batch_size=512,
   tensorboard_step=100,
 
-  checkpoint_save_step=2500, # virtual_batch -> 10000 step
+  checkpoint_save_step=250, # virtual_batch -> 10000 step
   model_type="bert_ubuntu_pt",
-  data_dir="./data/ubuntu_corpus_v2/ubuntu_post_training.hdf5",
+  data_dir="./data/Ubuntu_Corpus_V2/ubuntu_post_training.hdf5",
 )
+
+
+DPT_FINETUNING_PARAMS = BASE_PARAMS.copy()
+DPT_FINETUNING_PARAMS.update(
+  bert_checkpoint_path="bert-post-uncased-pytorch_model.pth", # should be defined here
+  model_type="bert_dpt_ft",
+  train_batch_size=12,
+  virtual_batch_size=768,
+)
+

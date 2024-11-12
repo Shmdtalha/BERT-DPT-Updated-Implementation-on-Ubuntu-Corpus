@@ -18,6 +18,9 @@ class BERTDomainPostTraining(object):
   def __init__(self, hparams):
     self.hparams = hparams
     self._logger = logging.getLogger(__name__)
+     # Check for GPU availability and set device
+    self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    print(f"Using device: {self.device}")
 
 
   def _build_dataloader(self):
@@ -27,7 +30,7 @@ class BERTDomainPostTraining(object):
     self.train_dataset = BertPostTrainingDataset(self.hparams, split="train")
     self.train_dataloader = DataLoader(
       self.train_dataset,
-      batch_size=32,
+      batch_size=self.hparams.train_batch_size,
       num_workers=0,
       shuffle=False,
       drop_last=True
@@ -46,6 +49,8 @@ class BERTDomainPostTraining(object):
     print('\t* Building model...')
 
     self.model = Model(self.hparams)
+    # Move the model to GPU (if available)
+    self.model = self.model.to(self.device)
 
     self.optimizer = optim.Adam(self.model.parameters(), lr=3e-5)
     self.iterations = len(self.train_dataset) // 512
@@ -107,12 +112,9 @@ class BERTDomainPostTraining(object):
       tqdm_batch_iterator = tqdm(self.train_dataloader)
       print("Done tqdm_batch_iterator",)
       for batch_idx, batch in enumerate(tqdm_batch_iterator):
-        print("batch_idx:", batch_idx)
-        
-        buffer_batch = batch.copy()
+        buffer_batch = {key: value.to(self.device) for key, value in batch.items()}
         
         for key in batch:
-          print("key:", key)
           buffer_batch[key] = buffer_batch[key]
 
         mlm_loss, nsp_loss = self.model(buffer_batch)
@@ -122,7 +124,6 @@ class BERTDomainPostTraining(object):
         accu_nsp_loss += nsp_loss.mean().item()
         accu_count += 1
 
-        print("accu_count", accu_count)
         accumulate_batch += buffer_batch["next_sentence_labels"].shape[0]
         if self.hparams.virtual_batch_size == accumulate_batch \
             or batch_idx == (len(self.train_dataset) // self.hparams.train_batch_size): # last batch

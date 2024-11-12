@@ -89,7 +89,7 @@ if __name__ == '__main__':
                           default="./results",
                           help="model train logs, checkpoints")
   arg_parser.add_argument("--data_dir", dest="data_dir", type=str,
-                          default="./data/ubuntu_corpus_v2/%s_%s.pkl",
+                          default="./data/Ubuntu_Corpus_V2/%s_%s.pkl",
                           help="ubuntu corpus v1 pkl path") # ubuntu_test.pkl, ubuntu_ubuntu_valid.pkl, ubuntu_test.pkl
   arg_parser.add_argument("--bert_pretrained_dir", dest="bert_pretrained_dir", type=str,
                           default="./resources",

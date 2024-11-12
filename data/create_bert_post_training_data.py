@@ -389,10 +389,10 @@ class CreateBertPretrainingData(object):
 if __name__ == "__main__":
   arg_parser = argparse.ArgumentParser(description="Bert / Create Pretraining Data")
   arg_parser.add_argument("--input_file", dest="input_file", type=str,
-                          default="./data/ubuntu_corpus_v2/ubuntu_post_training.txt",
+                          default="./data/Ubuntu_Corpus_V2/ubuntu_post_training.txt",
                           help="Input raw text file (or comma-separated list of files).")
   arg_parser.add_argument("--output_file", dest="output_file", type=str,
-                          default="./data/ubuntu_corpus_v2/ubuntu_post_training.hdf5",
+                          default="./data/Ubuntu_Corpus_V2/ubuntu_post_training.hdf5",
                           help="Output example pkl.")
   arg_parser.add_argument("--do_lower_case", dest="do_lower_case", type=bool, default=True,
                           help="Whether to lower case the input text. Should be True for uncased.")
