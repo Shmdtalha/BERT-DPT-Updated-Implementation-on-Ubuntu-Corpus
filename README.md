@@ -61,7 +61,7 @@ pip install numpy six h5py tensorboard evaluate rouge_score
 ```bash
 python main.py --model bert_ubuntu_pt --train_type post_training --bert_pretrained bert-base-uncased --data_dir ./data/Ubuntu_Corpus_V2/ubuntu_post_training.hdf5
 ```
-This will create checkpoints in `results/bert_ubuntu_pt/post_training/{TIMESTAMP}/checkpoints/` folder. Rename it to `bert-post-uncased-pytorch_model.pth` and place it in the in the `resources/bert-post-uncased` folder. 
+This will create checkpoints in `results/bert_ubuntu_pt/post_training/{TIMESTAMP}/checkpoints/` folder. Rename the final checkpoint to `bert-post-uncased-pytorch_model.pth` and place it in the `resources/bert-post-uncased` folder. 
 
 You may skip this step by placing [bert-post-uncased-pytorch_model.pth](https://drive.google.com/file/d/1VY9MpLJz6Zxe3KiCQ5fUmH7g8Bra-lbp/view?usp=sharing) in the `resources/bert-post-uncased` folder.
 
@@ -72,7 +72,7 @@ You may skip this step by placing [bert-post-uncased-pytorch_model.pth](https://
 ```bash
 python main.py --model bert_dpt_ft --train_type fine_tuning --bert_pretrained bert-post-uncased
 ```
-This will create checkpoints in `results/bert_dpt_ft/fine_tuning/{TIMESTAMP}/checkpoints/` folder. Place the final checkpoint in the `results/bert_dpt_ft/fine_tuning/` folder.
+This will create checkpoints in `results/bert_dpt_ft/fine_tuning/{TIMESTAMP}/checkpoints/` folder. Rename the final checkpoint to `checkpoint.pth` and place it in the `results/bert_dpt_ft/fine_tuning/` folder.
 
 You may skip this step by placing [checkpoint.pth](https://drive.google.com/file/d/1qV2g8RoCtu2DAnAcAiom9Mh-RvaFaOYE/view?usp=drive_link) in the `results/bert_dpt_ft/fine_tuning` folder.
 
@@ -81,7 +81,7 @@ You may skip this step by placing [checkpoint.pth](https://drive.google.com/file
 For evaluation, run:
 
 ```bash
-python  main.py --model bert_dpt_ft --train_type fine_tuning --bert_pretrained bert-post-uncased --evaluate results/bert_dpt_ft/fine_tuning/[TIMESTAMP]/checkpoints/checkpoint.pth
+python  main.py --model bert_dpt_ft --train_type fine_tuning --bert_pretrained bert-post-uncased --evaluate results/bert_dpt_ft/fine_tuning/checkpoint.pth
 ```
 
 This will print evaluation metrics and generate prediction scores
