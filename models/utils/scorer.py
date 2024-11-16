@@ -9,12 +9,16 @@ def calculate_candidates_ranking(prediction, ground_truth, eval_candidates_num=1
   stack_scores = np.stack((gt_split, pred_split, orig_rank_split), axis=-1)
 
   rank_by_pred_l = []
+  rank_by_pred_f = []
   for i, stack_score in enumerate(stack_scores):
     rank_by_pred = sorted(stack_score, key=lambda x: x[1], reverse=True)
     rank_by_pred = np.stack(rank_by_pred, axis=-1)
     rank_by_pred_l.append(rank_by_pred[0])
+    rank_by_pred_f.append(rank_by_pred)
 
-  return np.array(rank_by_pred_l)
+
+
+  return np.array(rank_by_pred_l), np.array(rank_by_pred_f)
 
 def logits_recall_at_k(rank_by_pred, k_list=[1, 2, 5, 10]):
   # 1 dialog, 10 response candidates ground truth 1 or 0

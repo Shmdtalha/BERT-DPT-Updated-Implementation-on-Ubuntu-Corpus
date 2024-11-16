@@ -44,7 +44,7 @@ BASE_PARAMS = defaultdict(
   model_type="bert_base_ft",
 
 
-  load_pthpath="results/bert_dpt_ft/fine_tuning/20241111-205705/checkpoints/checkpoint_4.pth",
+  load_pthpath="",
   cpu_workers=0,
   tensorboard_step=1000,
   evaluate_print_step=100,
