@@ -1,0 +1,17 @@
+/home/l215775/BERT-FP
+Namespace(task='ubuntu', is_training='False', batch_size=64, learning_rate=1e-05, epochs=10, save_path='Fine-Tuning/FT_checkpoint/ubuntu.0.pt', score_file_path='./Fine-Tuning/scorefile.txt', do_lower_case=True)
+Task:  ubuntu
+Loading Data done
+use time:  0.14652750094731648  min
+Cuda Available true?  True
+Only testing
+torch.cuda.is_available():  True
+Batch[0] batch_size:400
+Batch[100] batch_size:400
+Batch[200] batch_size:400
+Batch[300] batch_size:400
+Batch[400] batch_size:400
+./Fine-Tuning/scorefile.txt opened
+Evaluation Result: 
+ MAP: 0.9066936267843378 	 MRR: 0.9067742175143891 	 P@1: 0.8466257668711656 	 R1: 0.8463084408715887 	 R2: 0.9298709540935054 	 R5: 0.9875978421832029
+use time:  26.766135438283285  min

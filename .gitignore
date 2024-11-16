@@ -1,6 +1,5 @@
 
 Ubuntu_Corpus_V2/
-*.log
 __pycache__/
 checkpoints/
 results/

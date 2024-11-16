@@ -1,0 +1,271 @@
+/home/l215775/BERT-FP
+Namespace(task='ubuntu', is_training=True, batch_size=75, learning_rate=1e-05, epochs=10, save_path='Fine-Tuning/FT_checkpoint/ubuntu.0.pt', score_file_path='./Fine-Tuning/scorefile.txt', do_lower_case=True)
+Task:  ubuntu
+Loading Data done
+use time:  0.1457539995511373  min
+Cuda Available true?  True
+First training, then testing
+torch.cuda.is_available():  True
+Training Now
+
+Epoch  1 / 10
+Batch[0] - loss: 0.608158  batch_size:75
+Batch[1000] - loss: 0.193692  batch_size:75
+Batch[2000] - loss: 0.129632  batch_size:75
+Batch[3000] - loss: 0.184584  batch_size:75
+Batch[4000] - loss: 0.409918  batch_size:75
+Batch[5000] - loss: 0.192034  batch_size:75
+Batch[6000] - loss: 0.280409  batch_size:75
+Batch[7000] - loss: 0.188768  batch_size:75
+Batch[8000] - loss: 0.240010  batch_size:75
+Batch[9000] - loss: 0.272819  batch_size:75
+Batch[10000] - loss: 0.216089  batch_size:75
+Batch[11000] - loss: 0.297551  batch_size:75
+Batch[12000] - loss: 0.175923  batch_size:75
+Average loss:0.248758 
+Batch[0] batch_size:400
+Batch[100] batch_size:400
+Batch[200] batch_size:400
+Batch[300] batch_size:400
+Batch[400] batch_size:400
+./Fine-Tuning/scorefile.txt opened
+Evaluation Result: 
+ MAP: 0.9049782645416088 	 MRR: 0.9050322682024885 	 P@1: 0.8429346157781643 	 R1: 0.8425764862375934 	 R2: 0.9300624168627852 	 R5: 0.9877468535761793
+Best Result: 
+ MAP: 0 	 MRR: 0 	 P@1: 0 	 R1: 0 	 R2: 0 	 R5: 0
+save model!!!
+
+
+Epoch  2 / 10
+Batch[0] - loss: 0.129615  batch_size:75
+Batch[1000] - loss: 0.198591  batch_size:75
+Batch[2000] - loss: 0.195085  batch_size:75
+Batch[3000] - loss: 0.159420  batch_size:75
+Batch[4000] - loss: 0.172040  batch_size:75
+Batch[5000] - loss: 0.122714  batch_size:75
+Batch[6000] - loss: 0.194356  batch_size:75
+Batch[7000] - loss: 0.225324  batch_size:75
+Batch[8000] - loss: 0.261806  batch_size:75
+Batch[9000] - loss: 0.279966  batch_size:75
+Batch[10000] - loss: 0.200471  batch_size:75
+Batch[11000] - loss: 0.292063  batch_size:75
+Batch[12000] - loss: 0.197328  batch_size:75
+Average loss:0.194824 
+Batch[0] batch_size:400
+Batch[100] batch_size:400
+Batch[200] batch_size:400
+Batch[300] batch_size:400
+Batch[400] batch_size:400
+./Fine-Tuning/scorefile.txt opened
+Evaluation Result: 
+ MAP: 0.9043202725682586 	 MRR: 0.9043614858884038 	 P@1: 0.8420648726082063 	 R1: 0.8417067430676354 	 R2: 0.9293717384631126 	 R5: 0.9882073058426276
+
+Epoch  3 / 10
+Batch[0] - loss: 0.144261  batch_size:75
+Batch[1000] - loss: 0.162643  batch_size:75
+Batch[2000] - loss: 0.136010  batch_size:75
+Batch[3000] - loss: 0.107090  batch_size:75
+Batch[4000] - loss: 0.190269  batch_size:75
+Batch[5000] - loss: 0.174355  batch_size:75
+Batch[6000] - loss: 0.210782  batch_size:75
+Batch[7000] - loss: 0.134830  batch_size:75
+Batch[8000] - loss: 0.224035  batch_size:75
+Batch[9000] - loss: 0.184609  batch_size:75
+Batch[10000] - loss: 0.250409  batch_size:75
+Batch[11000] - loss: 0.105256  batch_size:75
+Batch[12000] - loss: 0.146990  batch_size:75
+Average loss:0.152113 
+Batch[0] batch_size:400
+Batch[100] batch_size:400
+Batch[200] batch_size:400
+Batch[300] batch_size:400
+Batch[400] batch_size:400
+./Fine-Tuning/scorefile.txt opened
+Evaluation Result: 
+ MAP: 0.9002626283297603 	 MRR: 0.9003201848630664 	 P@1: 0.8367952522255193 	 R1: 0.8364371226849483 	 R2: 0.9235649237695692 	 R5: 0.9872608206282615
+
+Epoch  4 / 10
+Batch[0] - loss: 0.128968  batch_size:75
+Batch[1000] - loss: 0.075119  batch_size:75
+Batch[2000] - loss: 0.160557  batch_size:75
+Batch[3000] - loss: 0.063725  batch_size:75
+Batch[4000] - loss: 0.116389  batch_size:75
+Batch[5000] - loss: 0.066854  batch_size:75
+Batch[6000] - loss: 0.139216  batch_size:75
+Batch[7000] - loss: 0.141133  batch_size:75
+Batch[8000] - loss: 0.200215  batch_size:75
+Batch[9000] - loss: 0.126049  batch_size:75
+Batch[10000] - loss: 0.121951  batch_size:75
+Batch[11000] - loss: 0.293428  batch_size:75
+Batch[12000] - loss: 0.178243  batch_size:75
+Average loss:0.118416 
+Batch[0] batch_size:400
+Batch[100] batch_size:400
+Batch[200] batch_size:400
+Batch[300] batch_size:400
+Batch[400] batch_size:400
+./Fine-Tuning/scorefile.txt opened
+Evaluation Result: 
+ MAP: 0.8978791178806602 	 MRR: 0.8979271527158637 	 P@1: 0.8329069886421774 	 R1: 0.8325488591016065 	 R2: 0.9220556635628773 	 R5: 0.9855980763327535
+
+Epoch  5 / 10
+Reload the best model...
+Decay learning rate to:  5e-06
+Batch[0] - loss: 0.197010  batch_size:75
+Batch[1000] - loss: 0.129429  batch_size:75
+Batch[2000] - loss: 0.137484  batch_size:75
+Batch[3000] - loss: 0.284299  batch_size:75
+Batch[4000] - loss: 0.326594  batch_size:75
+Batch[5000] - loss: 0.266745  batch_size:75
+Batch[6000] - loss: 0.245477  batch_size:75
+Batch[7000] - loss: 0.226222  batch_size:75
+Batch[8000] - loss: 0.160335  batch_size:75
+Batch[9000] - loss: 0.165062  batch_size:75
+Batch[10000] - loss: 0.191365  batch_size:75
+Batch[11000] - loss: 0.225800  batch_size:75
+Batch[12000] - loss: 0.205019  batch_size:75
+Average loss:0.188231 
+Batch[0] batch_size:400
+Batch[100] batch_size:400
+Batch[200] batch_size:400
+Batch[300] batch_size:400
+Batch[400] batch_size:400
+./Fine-Tuning/scorefile.txt opened
+Evaluation Result: 
+ MAP: 0.9064436315472398 	 MRR: 0.9064848448673849 	 P@1: 0.8452880384733449 	 R1: 0.844929908932774 	 R2: 0.9310089020771514 	 R5: 0.9876956922132406
+Best Result: 
+ MAP: 0.9049782645416088 	 MRR: 0.9050322682024885 	 P@1: 0.8429346157781643 	 R1: 0.8425764862375934 	 R2: 0.9300624168627852 	 R5: 0.9877468535761793
+save model!!!
+
+
+Epoch  6 / 10
+Batch[0] - loss: 0.189355  batch_size:75
+Batch[1000] - loss: 0.141160  batch_size:75
+Batch[2000] - loss: 0.179738  batch_size:75
+Batch[3000] - loss: 0.222025  batch_size:75
+Batch[4000] - loss: 0.165981  batch_size:75
+Batch[5000] - loss: 0.095607  batch_size:75
+Batch[6000] - loss: 0.053174  batch_size:75
+Batch[7000] - loss: 0.148144  batch_size:75
+Batch[8000] - loss: 0.267319  batch_size:75
+Batch[9000] - loss: 0.214995  batch_size:75
+Batch[10000] - loss: 0.192142  batch_size:75
+Batch[11000] - loss: 0.172111  batch_size:75
+Batch[12000] - loss: 0.140844  batch_size:75
+Average loss:0.161907 
+Batch[0] batch_size:400
+Batch[100] batch_size:400
+Batch[200] batch_size:400
+Batch[300] batch_size:400
+Batch[400] batch_size:400
+./Fine-Tuning/scorefile.txt opened
+Evaluation Result: 
+ MAP: 0.9027103341080697 	 MRR: 0.9027541054963616 	 P@1: 0.840171902179474 	 R1: 0.8398137726389031 	 R2: 0.9257392816944643 	 R5: 0.9880026603908728
+
+Epoch  7 / 10
+Batch[0] - loss: 0.089660  batch_size:75
+Batch[1000] - loss: 0.099401  batch_size:75
+Batch[2000] - loss: 0.079748  batch_size:75
+Batch[3000] - loss: 0.181243  batch_size:75
+Batch[4000] - loss: 0.081076  batch_size:75
+Batch[5000] - loss: 0.209836  batch_size:75
+Batch[6000] - loss: 0.070408  batch_size:75
+Batch[7000] - loss: 0.093758  batch_size:75
+Batch[8000] - loss: 0.127812  batch_size:75
+Batch[9000] - loss: 0.048754  batch_size:75
+Batch[10000] - loss: 0.119504  batch_size:75
+Batch[11000] - loss: 0.111326  batch_size:75
+Batch[12000] - loss: 0.177410  batch_size:75
+Average loss:0.137860 
+Batch[0] batch_size:400
+Batch[100] batch_size:400
+Batch[200] batch_size:400
+Batch[300] batch_size:400
+Batch[400] batch_size:400
+./Fine-Tuning/scorefile.txt opened
+Evaluation Result: 
+ MAP: 0.89937335451252 	 MRR: 0.8994256527946353 	 P@1: 0.8351580886114807 	 R1: 0.8347999590709096 	 R2: 0.9241788601248337 	 R5: 0.9852399467921825
+
+Epoch  8 / 10
+Batch[0] - loss: 0.120015  batch_size:75
+Batch[1000] - loss: 0.160007  batch_size:75
+Batch[2000] - loss: 0.100220  batch_size:75
+Batch[3000] - loss: 0.070530  batch_size:75
+Batch[4000] - loss: 0.132088  batch_size:75
+Batch[5000] - loss: 0.092574  batch_size:75
+Batch[6000] - loss: 0.143546  batch_size:75
+Batch[7000] - loss: 0.112717  batch_size:75
+Batch[8000] - loss: 0.098777  batch_size:75
+Batch[9000] - loss: 0.063286  batch_size:75
+Batch[10000] - loss: 0.138864  batch_size:75
+Batch[11000] - loss: 0.177472  batch_size:75
+Batch[12000] - loss: 0.119784  batch_size:75
+Average loss:0.117963 
+Batch[0] batch_size:400
+Batch[100] batch_size:400
+Batch[200] batch_size:400
+Batch[300] batch_size:400
+Batch[400] batch_size:400
+./Fine-Tuning/scorefile.txt opened
+Evaluation Result: 
+ MAP: 0.8982583210302524 	 MRR: 0.8983020924185444 	 P@1: 0.834032538626829 	 R1: 0.833674409086258 	 R2: 0.9219021794740612 	 R5: 0.9845236877110406
+
+Epoch  9 / 10
+Reload the best model...
+Decay learning rate to:  2.5e-06
+Batch[0] - loss: 0.161061  batch_size:75
+Batch[1000] - loss: 0.159401  batch_size:75
+Batch[2000] - loss: 0.079280  batch_size:75
+Batch[3000] - loss: 0.114799  batch_size:75
+Batch[4000] - loss: 0.285307  batch_size:75
+Batch[5000] - loss: 0.270528  batch_size:75
+Batch[6000] - loss: 0.271096  batch_size:75
+Batch[7000] - loss: 0.209793  batch_size:75
+Batch[8000] - loss: 0.169445  batch_size:75
+Batch[9000] - loss: 0.144981  batch_size:75
+Batch[10000] - loss: 0.089944  batch_size:75
+Batch[11000] - loss: 0.135870  batch_size:75
+Batch[12000] - loss: 0.219842  batch_size:75
+Average loss:0.158207 
+Batch[0] batch_size:400
+Batch[100] batch_size:400
+Batch[200] batch_size:400
+Batch[300] batch_size:400
+Batch[400] batch_size:400
+./Fine-Tuning/scorefile.txt opened
+Evaluation Result: 
+ MAP: 0.9047286904802583 	 MRR: 0.9047699038004033 	 P@1: 0.8435485521334288 	 R1: 0.8431904225928579 	 R2: 0.9276322521231966 	 R5: 0.9880538217538115
+
+Epoch  10 / 10
+Batch[0] - loss: 0.175822  batch_size:75
+Batch[1000] - loss: 0.099485  batch_size:75
+Batch[2000] - loss: 0.204879  batch_size:75
+Batch[3000] - loss: 0.070437  batch_size:75
+Batch[4000] - loss: 0.131232  batch_size:75
+Batch[5000] - loss: 0.120873  batch_size:75
+Batch[6000] - loss: 0.108898  batch_size:75
+Batch[7000] - loss: 0.085111  batch_size:75
+Batch[8000] - loss: 0.160662  batch_size:75
+Batch[9000] - loss: 0.093697  batch_size:75
+Batch[10000] - loss: 0.085507  batch_size:75
+Batch[11000] - loss: 0.075626  batch_size:75
+Batch[12000] - loss: 0.110490  batch_size:75
+Average loss:0.144470 
+Batch[0] batch_size:400
+Batch[100] batch_size:400
+Batch[200] batch_size:400
+Batch[300] batch_size:400
+Batch[400] batch_size:400
+./Fine-Tuning/scorefile.txt opened
+Evaluation Result: 
+ MAP: 0.9029884326594723 	 MRR: 0.9030296459796175 	 P@1: 0.8402742249053515 	 R1: 0.8399160953647805 	 R2: 0.9278368975749514 	 R5: 0.9872864013097309
+torch.cuda.is_available():  True
+Batch[0] batch_size:400
+Batch[100] batch_size:400
+Batch[200] batch_size:400
+Batch[300] batch_size:400
+Batch[400] batch_size:400
+./Fine-Tuning/scorefile.txt opened
+Evaluation Result: 
+ MAP: 0.9067720138616144 	 MRR: 0.9068526045916657 	 P@1: 0.8467844298709541 	 R1: 0.8464671038713772 	 R2: 0.9298709540935054 	 R5: 0.9875978421832029
+use time:  4296.76186751922  min
