@@ -54,47 +54,47 @@ pip install numpy six h5py tensorboard evaluate rouge_score
 
 ### Post-Training
 
-1. Download and place the [bert-base-uncased-pytorch_model.bin](https://drive.google.com/file/d/17mUrNowFa-833vgzLwO5JfC3lAPbBNhy/view?usp=sharing) file in `resources/bert-base-uncased/bert-base-uncased-pytorch_model.bin`
+    1. Download and place the [bert-base-uncased-pytorch_model.bin](https://drive.google.com/file/d/17mUrNowFa-833vgzLwO5JfC3lAPbBNhy/view?usp=sharing) file in `resources/bert-base-uncased/bert-base-uncased-pytorch_model.bin`
 
-2. Run the following command:
+    2. Run the following command:
 
-```bash
-python main.py --model bert_ubuntu_pt --train_type post_training --bert_pretrained bert-base-uncased --data_dir ./data/Ubuntu_Corpus_V2/ubuntu_post_training.hdf5
-```
-This will create checkpoints in `results/bert_ubuntu_pt/post_training/{TIMESTAMP}/checkpoints/` folder
-You may skip this step by placing [bert-post-uncased-pytorch_model.pth](https://drive.google.com/file/d/1VY9MpLJz6Zxe3KiCQ5fUmH7g8Bra-lbp/view?usp=sharing) in the `resources/bert-post-uncased` folder.
+    ```bash
+    python main.py --model bert_ubuntu_pt --train_type post_training --bert_pretrained bert-base-uncased --data_dir ./data/Ubuntu_Corpus_V2/ubuntu_post_training.hdf5
+    ```
+    This will create checkpoints in `results/bert_ubuntu_pt/post_training/{TIMESTAMP}/checkpoints/` folder
+    You may skip this step by placing [bert-post-uncased-pytorch_model.pth](https://drive.google.com/file/d/1VY9MpLJz6Zxe3KiCQ5fUmH7g8Bra-lbp/view?usp=sharing) in the `resources/bert-post-uncased` folder.
 
 ### Fine-Tuning
 
-1. Run the following command:
+    1. Run the following command:
 
-```bash
-python main.py --model bert_dpt_ft --train_type fine_tuning --bert_pretrained bert-post-uncased
-```
-This will create checkpoints in `results/bert_dpt_ft/fine_tuning/{TIMESTAMP}/checkpoints/` folder
-You may skip this step by placing [checkpoint.pth](https://drive.google.com/file/d/1qV2g8RoCtu2DAnAcAiom9Mh-RvaFaOYE/view?usp=drive_link) in the `results/bert_dpt_ft/fine_tuning` folder.
+    ```bash
+    python main.py --model bert_dpt_ft --train_type fine_tuning --bert_pretrained bert-post-uncased
+    ```
+    This will create checkpoints in `results/bert_dpt_ft/fine_tuning/{TIMESTAMP}/checkpoints/` folder
+    You may skip this step by placing [checkpoint.pth](https://drive.google.com/file/d/1qV2g8RoCtu2DAnAcAiom9Mh-RvaFaOYE/view?usp=drive_link) in the `results/bert_dpt_ft/fine_tuning` folder.
 
 ## Evaluation
 
-For evaluation, run:
+    For evaluation, run:
 
-```bash
-python  main.py --model bert_dpt_ft --train_type fine_tuning --bert_pretrained bert-post-uncased --evaluate results/bert_dpt_ft/fine_tuning/[TIMESTAMP]/checkpoints/checkpoint.pth
-```
+    ```bash
+    python  main.py --model bert_dpt_ft --train_type fine_tuning --bert_pretrained bert-post-uncased --evaluate results/bert_dpt_ft/fine_tuning/[TIMESTAMP]/checkpoints/checkpoint.pth
+    ```
 
-This will print evaluation metrics and generate prediction scores
+    This will print evaluation metrics and generate prediction scores
 
 ## Calculate ROUGE Score
 
-To calculate the ROUGE score, execute:
+    To calculate the ROUGE score, execute:
 
-```bash
-python compute_rouge.py
-```
+    ```bash
+    python compute_rouge.py
+    ```
 
 ## Log Files
 
-We have shared log files from our experiments in the `Log Files` folder
+    We have shared log files from our experiments in the `Log Files` folder
 
 ## Acknowledgements
 [BERT-DPT GitHub Repository](https://github.com/taesunwhang/BERT-ResSel) \
