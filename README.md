@@ -91,7 +91,7 @@ This will print evaluation metrics and generate prediction scores
 To calculate the ROUGE score, execute:
 
 ```bash
-python compute_rouge.py
+python compute_rouge.py --num_of_responses 10
 ```
 
 ## Log Files
