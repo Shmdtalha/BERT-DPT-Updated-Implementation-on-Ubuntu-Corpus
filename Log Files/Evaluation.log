@@ -1,17 +1,26 @@
-/home/l215775/BERT-FP
-Namespace(task='ubuntu', is_training='False', batch_size=64, learning_rate=1e-05, epochs=10, save_path='Fine-Tuning/FT_checkpoint/ubuntu.0.pt', score_file_path='./Fine-Tuning/scorefile.txt', do_lower_case=True)
-Task:  ubuntu
-Loading Data done
-use time:  0.14652750094731648  min
-Cuda Available true?  True
-Only testing
-torch.cuda.is_available():  True
-Batch[0] batch_size:400
-Batch[100] batch_size:400
-Batch[200] batch_size:400
-Batch[300] batch_size:400
-Batch[400] batch_size:400
-./Fine-Tuning/scorefile.txt opened
-Evaluation Result: 
- MAP: 0.9066936267843378 	 MRR: 0.9067742175143891 	 P@1: 0.8466257668711656 	 R1: 0.8463084408715887 	 R2: 0.9298709540935054 	 R5: 0.9875978421832029
-use time:  26.766135438283285  min
+data module found
+data.dataset module found
+Evaluation Split : test
+100000 examples has been loaded!
+total test examples 188030
+./resources\bert-post-uncased
+./resources\bert-post-uncased\bert-post-uncased-vocab.txt
+No pre-defined model!
+100[th] | Recall@1 : 78.80% | Recall@2 : 89.70% | Recall@5 : 97.70% | Recall@10 : 100.00% |  | MRR : 0.869 | Precision@1 : 0.788
+200[th] | Recall@1 : 79.30% | Recall@2 : 89.45% | Recall@5 : 97.70% | Recall@10 : 100.00% |  | MRR : 0.871 | Precision@1 : 0.793
+300[th] | Recall@1 : 79.30% | Recall@2 : 89.43% | Recall@5 : 97.83% | Recall@10 : 100.00% |  | MRR : 0.871 | Precision@1 : 0.793
+400[th] | Recall@1 : 79.42% | Recall@2 : 89.53% | Recall@5 : 98.02% | Recall@10 : 100.00% |  | MRR : 0.872 | Precision@1 : 0.794
+500[th] | Recall@1 : 79.96% | Recall@2 : 89.74% | Recall@5 : 98.14% | Recall@10 : 100.00% |  | MRR : 0.876 | Precision@1 : 0.800
+600[th] | Recall@1 : 80.18% | Recall@2 : 89.85% | Recall@5 : 98.10% | Recall@10 : 100.00% |  | MRR : 0.877 | Precision@1 : 0.802
+700[th] | Recall@1 : 80.19% | Recall@2 : 89.83% | Recall@5 : 98.10% | Recall@10 : 100.00% |  | MRR : 0.877 | Precision@1 : 0.802
+800[th] | Recall@1 : 80.35% | Recall@2 : 89.96% | Recall@5 : 98.01% | Recall@10 : 100.00% |  | MRR : 0.878 | Precision@1 : 0.803
+900[th] | Recall@1 : 80.08% | Recall@2 : 89.81% | Recall@5 : 97.91% | Recall@10 : 100.00% |  | MRR : 0.876 | Precision@1 : 0.801
+1000[th] | Recall@1 : 80.22% | Recall@2 : 89.88% | Recall@5 : 98.01% | Recall@10 : 100.00% |  | MRR : 0.877 | Precision@1 : 0.802
+1100[th] | Recall@1 : 80.38% | Recall@2 : 89.99% | Recall@5 : 98.02% | Recall@10 : 100.00% |  | MRR : 0.878 | Precision@1 : 0.804
+1200[th] | Recall@1 : 80.25% | Recall@2 : 89.96% | Recall@5 : 98.00% | Recall@10 : 100.00% |  | MRR : 0.877 | Precision@1 : 0.802
+1300[th] | Recall@1 : 80.28% | Recall@2 : 90.01% | Recall@5 : 98.00% | Recall@10 : 100.00% |  | MRR : 0.878 | Precision@1 : 0.803
+1400[th] | Recall@1 : 80.38% | Recall@2 : 90.04% | Recall@5 : 98.01% | Recall@10 : 100.00% |  | MRR : 0.878 | Precision@1 : 0.804
+1500[th] | Recall@1 : 80.50% | Recall@2 : 90.11% | Recall@5 : 98.03% | Recall@10 : 100.00% |  | MRR : 0.879 | Precision@1 : 0.805
+1600[th] | Recall@1 : 80.55% | Recall@2 : 90.12% | Recall@5 : 98.04% | Recall@10 : 100.00% |  | MRR : 0.879 | Precision@1 : 0.805
+1700[th] | Recall@1 : 80.42% | Recall@2 : 90.05% | Recall@5 : 98.07% | Recall@10 : 100.00% |  | MRR : 0.878 | Precision@1 : 0.804
+1800[th] | Recall@1 : 80.49% | Recall@2 : 90.11% | Recall@5 : 98.08% | Recall@10 : 100.00% |  | MRR : 0.879 | Precision@1 : 0.805

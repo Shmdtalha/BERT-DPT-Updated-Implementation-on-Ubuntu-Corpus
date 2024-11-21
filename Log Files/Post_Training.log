@@ -1,0 +1,30 @@
+data module found
+data.dataset module found
+Training
+---------in training-----------
+---------------------------------------Root dir:  ./results\bert_ubuntu_pt\post_training\20241013-172310/
+Using device: cuda
+---------------------------------------Start Training---------------------------
+total train examples : 872323
+
+       # -------------------------------------------------------------------------
+       #   DATALOADER FINISHED
+       # -------------------------------------------------------------------------
+       
+	* Building model...
+
+      # -------------------------------------------------------------------------
+      #  Building Model Finished
+      # -------------------------------------------------------------------------
+      
+
+      # -------------------------------------------------------------------------
+      #   Setup Training Finished
+      # -------------------------------------------------------------------------
+      
+EPoch# 1
+Done self.model.train()
+Done tqdm_batch_iterator
+EPoch# 2
+Done self.model.train()
+Done tqdm_batch_iterator
