@@ -28,7 +28,7 @@ pip install numpy six h5py tensorboard evaluate rouge_score
 
 ## Data Processing
 
-1. Download the [Ubuntu Dialogue Corpus](https://drive.google.com/drive/folders/1cm1v3njWPxG5-XhEUpGH25TMncaPR7OM?usp=sharing). Place the files in the Ubuntu_Corpus_V2 folder.
+1. Download the [Ubuntu Dialogue Corpus](https://drive.google.com/drive/folders/1OY7UZWH76iZdF3sot9883L9TpEKOXr4I?usp=sharing). Place the files in the Ubuntu_Corpus_V2 folder.
 
 2. Process the data by running:
 
