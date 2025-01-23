@@ -28,7 +28,7 @@ pip install numpy six h5py tensorboard evaluate rouge_score
 
 ## Data Processing
 
-1. Download the [Ubuntu Dialogue Corpus](https://drive.google.com/drive/folders/1OY7UZWH76iZdF3sot9883L9TpEKOXr4I?usp=sharing). Place the files in the Ubuntu_Corpus_V2 folder.
+1. Download the [Ubuntu Dialogue Corpus](https://drive.google.com/drive/folders/1OY7UZWH76iZdF3sot9883L9TpEKOXr4I?usp=sharing). Place the files in the `data/Ubuntu_Corpus_V2` folder.
 
 2. Process the data by running:
 
@@ -40,6 +40,8 @@ pip install numpy six h5py tensorboard evaluate rouge_score
    - [ubunutu_train.pkl](https://drive.google.com/file/d/1YPinTNhkZKXsgFiVcdrrHVciFmbSeSKY/view?usp=drive_link)
    - [ubuntu_valid.pkl](https://drive.google.com/file/d/1EWQfOq-ej8ArPiXxILppuQqKbuitYeJy/view?usp=sharing)
    - [ubuntu_test.pkl](https://drive.google.com/file/d/19DyD3NP1x2x-NgCgzOCFt7yIiRtHKUa3/view?usp=sharing)
+  
+   You may skip this step by placing `data/Ubuntu_Corpus_V2` folder.
 
 3. Create BERT post-training data:
 
@@ -48,7 +50,7 @@ pip install numpy six h5py tensorboard evaluate rouge_score
    ```
    After processing, you should have the following files:
    - [ubuntu_post_training.hdf5](https://drive.google.com/file/d/14IHvS5mqsEUOMMX7tz0MVoYPWZ7NTJIR/view?usp=drive_link)
- 
+    
 
 ## Training Pipeline
 
