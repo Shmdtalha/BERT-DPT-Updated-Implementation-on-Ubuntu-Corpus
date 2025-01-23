@@ -41,7 +41,7 @@ pip install numpy six h5py tensorboard evaluate rouge_score
    - [ubuntu_valid.pkl](https://drive.google.com/file/d/1EWQfOq-ej8ArPiXxILppuQqKbuitYeJy/view?usp=sharing)
    - [ubuntu_test.pkl](https://drive.google.com/file/d/19DyD3NP1x2x-NgCgzOCFt7yIiRtHKUa3/view?usp=sharing)
   
-   You may skip this step by placing `data/Ubuntu_Corpus_V2` folder.
+   You may skip this step by placing these files `data/Ubuntu_Corpus_V2` folder.
 
 3. Create BERT post-training data:
 
